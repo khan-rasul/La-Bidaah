@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 
 @import 'tailwindcss';
 
 @theme {
     --font-montserrat: "Montserrat", sans-serif;
-    --font-cairo: "Cairo", sans-serif;
     --font-quicksand: "Quicksand", sans-serif;
-    --font-alexandria: "Alexandria", sans-serif;
     --color-matte-gold: #625443;
     --color-panthera-green: #263936;
     --color-off-white: #F5F3F0;
