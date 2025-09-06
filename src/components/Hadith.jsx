@@ -2,7 +2,7 @@ import { BookOpen, ChevronRight, Scroll } from "lucide-react";
 
 const Hadith = () => (
   <div className="w-full mb-6">
-    <div className="bg-gradient-to-r from-amber-700/40 to-amber-800/20 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 ease-out p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-10 relative overflow-hidden h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[32rem]">
+    <div className="bg-gradient-to-r from-amber-700/40 to-amber-800/20 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-101 transition-all duration-300 ease-out p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-10 relative overflow-hidden h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[32rem]">
       {/* Responsive background decoration */}
       <div className="absolute top-0 left-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 bg-white/6 rounded-full -translate-y-2 sm:-translate-y-3 md:-translate-y-4 lg:-translate-y-4 xl:-translate-y-4 2xl:-translate-y-6 -translate-x-2 sm:-translate-x-3 md:-translate-x-4 lg:-translate-x-4 xl:-translate-x-4 2xl:-translate-x-6"></div>
       <div className="absolute bottom-0 right-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 2xl:w-16 2xl:h-16 bg-white/4 rounded-full translate-y-1 sm:translate-y-1.5 md:translate-y-2 lg:translate-y-2 xl:translate-y-2 2xl:translate-y-4 translate-x-1 sm:translate-x-1.5 md:translate-x-2 lg:translate-x-2 xl:translate-x-2 2xl:translate-x-4"></div>
@@ -21,9 +21,7 @@ const Hadith = () => (
               Prophetic Guidance
             </p>
           </div>
-          <div className="bg-white/20 backdrop-blur-sm rounded-full px-2 py-1 sm:px-2.5 sm:py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 2xl:px-6 2xl:py-3 border border-white/20 flex-shrink-0">
-            <Scroll className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 text-matte-gold" />
-          </div>
+          <Scroll className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 text-white fill-white/20 drop-shadow-md" />
         </div>
 
         {/* Main Hadith Text - Takes up available space */}

@@ -30,7 +30,7 @@ const Dhikr = () => {
 
   return (
     <div
-      className="bg-gradient-to-r from-matte-gold to-matte-gold/20 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 ease-out p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-10 w-full h-full flex flex-col cursor-pointer relative overflow-hidden"
+      className="bg-gradient-to-r from-matte-gold to-matte-gold/20 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-101 transition-all duration-300 ease-out p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-10 w-full h-full flex flex-col cursor-pointer relative overflow-hidden"
       onClick={() => setDhikrCount(dhikrCount + 1)}
     >
       {/* Responsive background decoration */}
@@ -56,7 +56,7 @@ const Dhikr = () => {
               </span>
             </div>
             <RotateCcw
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 text-white/80 hover:scale-102 transition-transform duration-200"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 text-white fill-white/20 drop-shadow-md hover:scale-102 transition-transform duration-200"
               onClick={(e) => {
                 e.stopPropagation();
                 setDhikrCount(0);
