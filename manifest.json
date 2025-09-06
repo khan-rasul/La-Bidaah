@@ -1,9 +1,18 @@
 {
-    "name": "Lã Bida'ah",
-    "description": "Duniya in deen",
-    "version": "1.0",
     "manifest_version": 3,
+    "name": "Lā Bida'ah",
+    "version": "1.0",
+    "description": "Islamic companion extension",
+    "permissions": [
+        "sidePanel"
+    ],
     "action": {
-        "default_popup": "dist/index.html"
+        "default_title": "Open Lā Bida'ah"
+    },
+    "side_panel": {
+        "default_path": "dist/index.html"
+    },
+    "background": {
+        "service_worker": "background.js"
     }
 }

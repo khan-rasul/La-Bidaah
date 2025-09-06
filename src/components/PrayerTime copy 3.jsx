@@ -1,14 +1,4 @@
-import {
-  Clock,
-  MapPin,
-  Sunrise,
-  Sun,
-  CloudSun,
-  Sunset,
-  Moon,
-  Stars,
-  ChevronUp,
-} from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const PrayerTime = () => {
@@ -19,37 +9,13 @@ const PrayerTime = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Sample prayer times with appropriate icons
+  // Sample prayer times
   const prayerTimes = [
-    {
-      name: "Fajr",
-      time: "05:30",
-      arabic: "الفجر",
-      next: false,
-      icon: Sunrise,
-    },
-    {
-      name: "Dhuhr",
-      time: "13:15",
-      arabic: "الظهر",
-      next: false,
-      icon: Sun,
-    },
-    {
-      name: "Asr",
-      time: "16:45",
-      arabic: "العصر",
-      next: false,
-      icon: CloudSun,
-    },
-    {
-      name: "Maghrib",
-      time: "19:20",
-      arabic: "المغرب",
-      next: true,
-      icon: Sunset,
-    },
-    { name: "Isha", time: "20:50", arabic: "العشاء", next: false, icon: Moon },
+    { name: "Fajr", time: "05:30", arabic: "الفجر", next: false },
+    { name: "Dhuhr", time: "13:15", arabic: "الظهر", next: false },
+    { name: "Asr", time: "16:45", arabic: "العصر", next: false },
+    { name: "Maghrib", time: "19:20", arabic: "المغرب", next: true },
+    { name: "Isha", time: "20:50", arabic: "العشاء", next: false },
   ];
 
   const nextPrayer = prayerTimes.find((prayer) => prayer.next);
@@ -84,14 +50,14 @@ const PrayerTime = () => {
               </p>
             </div>
           </div>
-          <div className=" rounded-full px-3 py-1">
+          <div className="bg-white/25 backdrop-blur-md rounded-full px-3 py-1 border border-white/20">
             <Clock className="w-5 h-5 text-white drop-shadow-md" />
           </div>
         </div>
 
         {/* Next Prayer Countdown */}
         <div className="text-center mb-8 relative z-10">
-          <div className="text-white text-4xl font-extrabold leading-relaxed mb-2 font-quicksand drop-shadow-xl">
+          <div className="text-white text-4xl font-bold leading-relaxed mb-2 font-quicksand drop-shadow-xl">
             00:37:05
           </div>
           <p className="text-white/95 text-sm font-medium font-montserrat drop-shadow-lg">
@@ -104,31 +70,37 @@ const PrayerTime = () => {
 
         {/* Prayer Times Grid */}
         <div className="grid grid-cols-5 gap-4 relative z-10">
-          {prayerTimes.map((prayer, index) => {
-            const IconComponent = prayer.icon;
-            return (
-              <div key={prayer.name} className="text-center">
-                <div
-                  className={`flex flex-col items-center justify-end ${
-                    prayer.next ? "scale-110 text-white" : "text-off-white/70"
+          {prayerTimes.map((prayer, index) => (
+            <div key={prayer.name} className="text-center">
+              <div
+                className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 backdrop-blur-md transition-all duration-300 border ${
+                  prayer.next
+                    ? "bg-matte-gold/90 border-matte-gold shadow-lg shadow-matte-gold/30"
+                    : "bg-white/15 border-white/30"
+                }`}
+              >
+                <Clock
+                  className={`w-4 h-4 drop-shadow-md ${
+                    prayer.next ? "text-white" : "text-white/80"
                   }`}
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all duration-300 ">
-                    <IconComponent className="w-5 h-5 drop-shadow-md" />
-                  </div>
-                  <p className="text-xs font-medium font-montserrat mb-1 drop-shadow-md ">
-                    {prayer.name}
-                  </p>
-                  <p className="text-xs font-light font-montserrat drop-shadow-sm ">
-                    {prayer.time}
-                  </p>
-                  {/* {prayer.next && (
-                    <ChevronUp className="w-10 h-10 font-extrabold drop-shadow-md text-matte-gold" />
-                  )} */}
-                </div>
+                />
               </div>
-            );
-          })}
+              <p
+                className={`text-xs font-medium font-montserrat mb-1 drop-shadow-md ${
+                  prayer.next ? "text-white" : "text-white/90"
+                }`}
+              >
+                {prayer.name}
+              </p>
+              <p
+                className={`text-xs font-light font-montserrat drop-shadow-sm ${
+                  prayer.next ? "text-matte-gold font-medium" : "text-white/80"
+                }`}
+              >
+                {prayer.time}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Prayer indicators */}
