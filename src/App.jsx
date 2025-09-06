@@ -9,22 +9,29 @@ import Verse from "./components/Verse";
 
 const App = () => {
   return (
-    <div className="h-screen w-full text-white min-w-lg bg-gradient-to-br from-amber-400/8 from-5% via-neutral-800 via-25% to-neutral-800 overflow-y-auto">
-      <div className="p-4"></div>
-      <Header />
-      <div className="px-4 space-y-4 flex flex-col items-center max-w-2xl mx-auto">
-        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center w-full">
-          <Dhikr />
-          <Durood />
+    <div className="px-6 py-6 h-screen w-full max-w-full text-white min-w-fit bg-gradient-to-br from-amber-400/8 from-5% via-neutral-800 via-25% to-neutral-800 overflow-y-auto overflow-x-hidden">
+      <div className="flex flex-col space-y-6">
+        <Header />
+        <div className="flex space-x-6 justify-center w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 2xl:h-96">
+          <div className="flex-8">
+            <Dhikr />
+          </div>
+          <div className="flex-10">
+            <Durood />
+          </div>
         </div>
-        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center w-full">
-          <Dua />
-          <Tagline />
+        <div className="flex space-x-6 justify-center w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 2xl:h-96">
+          <div className="flex-2">
+            <Dua />
+          </div>
+          <div className="flex-1">
+            <Tagline />
+          </div>
         </div>
+        <PrayerTime />
+        <Verse />
+        <Hadith />
       </div>
-      <PrayerTime />
-      <Verse />
-      <Hadith />
     </div>
   );
 };

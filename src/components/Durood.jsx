@@ -20,12 +20,12 @@ const Durood = () => {
 
   return (
     <div
-      className="bg-gradient-to-r from-panthera-green to-panthera-green/10 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 ease-out p-8 w-100 h-64 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+      className="bg-gradient-to-r from-panthera-green to-panthera-green/10 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 ease-out p-8 w-full h-full flex flex-col justify-between cursor-pointer relative overflow-hidden"
       onClick={() => setDuroodCount(duroodCount + 1)}
     >
       {/* Background decoration */}
       <div className="absolute top-32 left-0 w-24 h-24 bg-white/10 rounded-full -translate-y-6 -translate-x-6"></div>
-      <div className="absolute top-2 left-30 w-16 h-16 bg-white/5 rounded-full translate-y-4 -translate-x-4"></div>
+      <div className="absolute top-2 right-30 w-16 h-16 bg-white/5 rounded-full translate-y-4 -translate-x-4"></div>
       <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-white/5 rounded-full"></div>
 
       {/* Header */}

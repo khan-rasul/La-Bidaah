@@ -39,7 +39,7 @@ const Dua = () => {
 
   return (
     <div
-      className="bg-gradient-to-r from-plum to-plum/20 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 ease-out p-8 w-120 h-64 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+      className="bg-gradient-to-r from-plum to-plum/20 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-102 transition-all duration-300 ease-out p-8 w-full h-full flex flex-col justify-between cursor-pointer relative overflow-hidden"
       onClick={handleCardClick}
     >
       {/* Minimal random circle decorations */}
